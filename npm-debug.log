@@ -1,0 +1,478 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.7.5
+3 info using node@v4.2.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData angular
+20 silly mapToRegistry name angular
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/angular
+24 silly fetchNamedPackageData bootstrap
+25 silly mapToRegistry name bootstrap
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+29 silly fetchNamedPackageData browserify-example
+30 silly mapToRegistry name browserify-example
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/browserify-example
+34 silly fetchNamedPackageData surge
+35 silly mapToRegistry name surge
+36 silly mapToRegistry using default registry
+37 silly mapToRegistry registry https://registry.npmjs.org/
+38 silly mapToRegistry uri https://registry.npmjs.org/surge
+39 verbose request uri https://registry.npmjs.org/browserify-example
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 10:23:55 PM
+42 verbose request id 03665ee0d949937d
+43 http request GET https://registry.npmjs.org/browserify-example
+44 verbose request uri https://registry.npmjs.org/surge
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 10:23:55 PM
+47 verbose etag "399HMRFLFNC7PLC425KJTBUU9"
+48 http request GET https://registry.npmjs.org/surge
+49 verbose request uri https://registry.npmjs.org/bootstrap
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 10:23:55 PM
+52 verbose etag "9L511Y7I2QMSOADF8T3P5P7GX"
+53 http request GET https://registry.npmjs.org/bootstrap
+54 verbose request uri https://registry.npmjs.org/angular
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 10:23:55 PM
+57 verbose etag "19EN1P7BDRV5FFVQW95OUEZOE"
+58 http request GET https://registry.npmjs.org/angular
+59 http 200 https://registry.npmjs.org/surge
+60 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+60 verbose headers   etag: '"4H7KZ75RICRBXHTBUWVZOO1WP"',
+60 verbose headers   'content-type': 'application/json',
+60 verbose headers   'cache-control': 'max-age=300',
+60 verbose headers   'content-length': '51311',
+60 verbose headers   'accept-ranges': 'bytes',
+60 verbose headers   date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   age: '282',
+60 verbose headers   connection: 'keep-alive',
+60 verbose headers   'x-served-by': 'cache-atl6227-ATL',
+60 verbose headers   'x-cache': 'HIT',
+60 verbose headers   'x-cache-hits': '1',
+60 verbose headers   'x-timer': 'S1456543435.360278,VS0,VE0',
+60 verbose headers   vary: 'Accept' }
+61 silly get cb [ 200,
+61 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+61 silly get     etag: '"4H7KZ75RICRBXHTBUWVZOO1WP"',
+61 silly get     'content-type': 'application/json',
+61 silly get     'cache-control': 'max-age=300',
+61 silly get     'content-length': '51311',
+61 silly get     'accept-ranges': 'bytes',
+61 silly get     date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+61 silly get     via: '1.1 varnish',
+61 silly get     age: '282',
+61 silly get     connection: 'keep-alive',
+61 silly get     'x-served-by': 'cache-atl6227-ATL',
+61 silly get     'x-cache': 'HIT',
+61 silly get     'x-cache-hits': '1',
+61 silly get     'x-timer': 'S1456543435.360278,VS0,VE0',
+61 silly get     vary: 'Accept' } ]
+62 verbose get saving surge to /Users/koolhavis/.npm/registry.npmjs.org/surge/.cache.json
+63 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+64 silly resolveWithNewModule surge@0.17.7 checking installable status
+65 silly cache add args [ 'surge@^0.17.6', null ]
+66 verbose cache add spec surge@^0.17.6
+67 silly cache add parsed spec Result {
+67 silly cache add   raw: 'surge@^0.17.6',
+67 silly cache add   scope: null,
+67 silly cache add   name: 'surge',
+67 silly cache add   rawSpec: '^0.17.6',
+67 silly cache add   spec: '>=0.17.6 <0.18.0',
+67 silly cache add   type: 'range' }
+68 silly addNamed surge@>=0.17.6 <0.18.0
+69 verbose addNamed ">=0.17.6 <0.18.0" is a valid semver range for surge
+70 silly addNameRange { name: 'surge', range: '>=0.17.6 <0.18.0', hasData: false }
+71 silly mapToRegistry name surge
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/surge
+75 verbose addNameRange registry:https://registry.npmjs.org/surge not in flight; fetching
+76 verbose get https://registry.npmjs.org/surge not expired, no request
+77 silly addNameRange number 2 { name: 'surge', range: '>=0.17.6 <0.18.0', hasData: true }
+78 silly addNameRange versions [ 'surge',
+78 silly addNameRange   [ '0.0.0',
+78 silly addNameRange     '0.1.0',
+78 silly addNameRange     '0.2.0',
+78 silly addNameRange     '0.3.0',
+78 silly addNameRange     '0.3.1',
+78 silly addNameRange     '0.3.2',
+78 silly addNameRange     '0.3.3',
+78 silly addNameRange     '0.4.0',
+78 silly addNameRange     '0.4.1',
+78 silly addNameRange     '0.5.0',
+78 silly addNameRange     '0.5.1',
+78 silly addNameRange     '0.5.2',
+78 silly addNameRange     '0.6.0',
+78 silly addNameRange     '0.7.0',
+78 silly addNameRange     '0.7.1',
+78 silly addNameRange     '0.7.2',
+78 silly addNameRange     '0.7.3',
+78 silly addNameRange     '0.7.4',
+78 silly addNameRange     '0.8.0',
+78 silly addNameRange     '0.8.1',
+78 silly addNameRange     '0.9.0',
+78 silly addNameRange     '0.10.0',
+78 silly addNameRange     '0.10.1',
+78 silly addNameRange     '0.10.2',
+78 silly addNameRange     '0.11.0',
+78 silly addNameRange     '0.11.1',
+78 silly addNameRange     '0.12.0',
+78 silly addNameRange     '0.13.0',
+78 silly addNameRange     '0.14.0',
+78 silly addNameRange     '0.14.1',
+78 silly addNameRange     '0.14.2',
+78 silly addNameRange     '0.14.3',
+78 silly addNameRange     '0.14.4',
+78 silly addNameRange     '0.15.0',
+78 silly addNameRange     '0.16.0',
+78 silly addNameRange     '0.17.0',
+78 silly addNameRange     '0.17.1',
+78 silly addNameRange     '0.17.2',
+78 silly addNameRange     '0.17.3',
+78 silly addNameRange     '0.17.4',
+78 silly addNameRange     '0.17.5',
+78 silly addNameRange     '0.17.6',
+78 silly addNameRange     '0.17.7' ] ]
+79 silly addNamed surge@0.17.7
+80 verbose addNamed "0.17.7" is a plain semver version for surge
+81 silly mapToRegistry name surge
+82 silly mapToRegistry using default registry
+83 silly mapToRegistry registry https://registry.npmjs.org/
+84 silly mapToRegistry uri https://registry.npmjs.org/surge
+85 verbose addRemoteTarball https://registry.npmjs.org/surge/-/surge-0.17.7.tgz not in flight; adding
+86 verbose addRemoteTarball [ 'https://registry.npmjs.org/surge/-/surge-0.17.7.tgz',
+86 verbose addRemoteTarball   'd9ec476451530ff88ffd6ad4e970041181aa032f' ]
+87 info retry fetch attempt 1 at 10:23:55 PM
+88 info attempt registry request try #1 at 10:23:55 PM
+89 http fetch GET https://registry.npmjs.org/surge/-/surge-0.17.7.tgz
+90 http 404 https://registry.npmjs.org/browserify-example
+91 verbose headers { 'content-type': 'application/json',
+91 verbose headers   'cache-control': 'max-age=0',
+91 verbose headers   'content-length': '2',
+91 verbose headers   'accept-ranges': 'bytes',
+91 verbose headers   date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+91 verbose headers   via: '1.1 varnish',
+91 verbose headers   age: '0',
+91 verbose headers   connection: 'keep-alive',
+91 verbose headers   'x-served-by': 'cache-atl6232-ATL',
+91 verbose headers   'x-cache': 'MISS',
+91 verbose headers   'x-cache-hits': '0',
+91 verbose headers   'x-timer': 'S1456543435.353188,VS0,VE101' }
+92 silly get cb [ 404,
+92 silly get   { 'content-type': 'application/json',
+92 silly get     'cache-control': 'max-age=0',
+92 silly get     'content-length': '2',
+92 silly get     'accept-ranges': 'bytes',
+92 silly get     date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+92 silly get     via: '1.1 varnish',
+92 silly get     age: '0',
+92 silly get     connection: 'keep-alive',
+92 silly get     'x-served-by': 'cache-atl6232-ATL',
+92 silly get     'x-cache': 'MISS',
+92 silly get     'x-cache-hits': '0',
+92 silly get     'x-timer': 'S1456543435.353188,VS0,VE101' } ]
+93 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/browserify-example
+93 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+93 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+93 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+93 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+93 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+93 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+93 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+93 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+93 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+93 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+93 silly fetchPackageMetaData  error for browserify-example@^1.0.0 { [Error: Registry returned 404 for GET on https://registry.npmjs.org/browserify-example] pkgid: 'browserify-example', statusCode: 404, code: 'E404' }
+94 http 200 https://registry.npmjs.org/angular
+95 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+95 verbose headers   etag: '"8VWFBHOV0AWWT0J58VBURPW7R"',
+95 verbose headers   'content-type': 'application/json',
+95 verbose headers   'cache-control': 'max-age=300',
+95 verbose headers   'content-length': '117419',
+95 verbose headers   'accept-ranges': 'bytes',
+95 verbose headers   date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+95 verbose headers   via: '1.1 varnish',
+95 verbose headers   age: '0',
+95 verbose headers   connection: 'keep-alive',
+95 verbose headers   'x-served-by': 'cache-atl6242-ATL',
+95 verbose headers   'x-cache': 'HIT',
+95 verbose headers   'x-cache-hits': '1',
+95 verbose headers   'x-timer': 'S1456543435.352294,VS0,VE87',
+95 verbose headers   vary: 'Accept' }
+96 silly get cb [ 200,
+96 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+96 silly get     etag: '"8VWFBHOV0AWWT0J58VBURPW7R"',
+96 silly get     'content-type': 'application/json',
+96 silly get     'cache-control': 'max-age=300',
+96 silly get     'content-length': '117419',
+96 silly get     'accept-ranges': 'bytes',
+96 silly get     date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+96 silly get     via: '1.1 varnish',
+96 silly get     age: '0',
+96 silly get     connection: 'keep-alive',
+96 silly get     'x-served-by': 'cache-atl6242-ATL',
+96 silly get     'x-cache': 'HIT',
+96 silly get     'x-cache-hits': '1',
+96 silly get     'x-timer': 'S1456543435.352294,VS0,VE87',
+96 silly get     vary: 'Accept' } ]
+97 verbose get saving angular to /Users/koolhavis/.npm/registry.npmjs.org/angular/.cache.json
+98 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+99 silly resolveWithNewModule angular@1.5.0 checking installable status
+100 silly cache add args [ 'angular@^1.4.8', null ]
+101 verbose cache add spec angular@^1.4.8
+102 silly cache add parsed spec Result {
+102 silly cache add   raw: 'angular@^1.4.8',
+102 silly cache add   scope: null,
+102 silly cache add   name: 'angular',
+102 silly cache add   rawSpec: '^1.4.8',
+102 silly cache add   spec: '>=1.4.8 <2.0.0',
+102 silly cache add   type: 'range' }
+103 silly addNamed angular@>=1.4.8 <2.0.0
+104 verbose addNamed ">=1.4.8 <2.0.0" is a valid semver range for angular
+105 silly addNameRange { name: 'angular', range: '>=1.4.8 <2.0.0', hasData: false }
+106 silly mapToRegistry name angular
+107 silly mapToRegistry using default registry
+108 silly mapToRegistry registry https://registry.npmjs.org/
+109 silly mapToRegistry uri https://registry.npmjs.org/angular
+110 verbose addNameRange registry:https://registry.npmjs.org/angular not in flight; fetching
+111 verbose get https://registry.npmjs.org/angular not expired, no request
+112 silly addNameRange number 2 { name: 'angular', range: '>=1.4.8 <2.0.0', hasData: true }
+113 silly addNameRange versions [ 'angular',
+113 silly addNameRange   [ '0.0.1',
+113 silly addNameRange     '0.0.1-1',
+113 silly addNameRange     '0.0.1-2',
+113 silly addNameRange     '0.0.2',
+113 silly addNameRange     '0.0.3',
+113 silly addNameRange     '0.0.4',
+113 silly addNameRange     '1.0.0',
+113 silly addNameRange     '1.0.1',
+113 silly addNameRange     '1.0.2',
+113 silly addNameRange     '1.0.3',
+113 silly addNameRange     '1.0.4',
+113 silly addNameRange     '1.0.5',
+113 silly addNameRange     '1.0.6',
+113 silly addNameRange     '1.0.7',
+113 silly addNameRange     '1.0.8',
+113 silly addNameRange     '1.1.0',
+113 silly addNameRange     '1.1.1',
+113 silly addNameRange     '1.1.2',
+113 silly addNameRange     '1.1.3',
+113 silly addNameRange     '1.1.4',
+113 silly addNameRange     '1.1.5',
+113 silly addNameRange     '1.2.0',
+113 silly addNameRange     '1.2.1',
+113 silly addNameRange     '1.2.2',
+113 silly addNameRange     '1.2.3',
+113 silly addNameRange     '1.2.4',
+113 silly addNameRange     '1.2.5',
+113 silly addNameRange     '1.2.6',
+113 silly addNameRange     '1.2.7',
+113 silly addNameRange     '1.2.8',
+113 silly addNameRange     '1.2.9',
+113 silly addNameRange     '1.2.10',
+113 silly addNameRange     '1.2.11',
+113 silly addNameRange     '1.2.12',
+113 silly addNameRange     '1.2.13',
+113 silly addNameRange     '1.2.14',
+113 silly addNameRange     '1.2.15',
+113 silly addNameRange     '1.2.16',
+113 silly addNameRange     '1.2.17',
+113 silly addNameRange     '1.2.18',
+113 silly addNameRange     '1.2.19',
+113 silly addNameRange     '1.2.20',
+113 silly addNameRange     '1.2.21',
+113 silly addNameRange     '1.2.22',
+113 silly addNameRange     '1.2.23',
+113 silly addNameRange     '1.3.0-rc.5',
+113 silly addNameRange     '1.3.0',
+113 silly addNameRange     '1.3.1',
+113 silly addNameRange     '1.3.2',
+113 silly addNameRange     '1.3.3',
+113 silly addNameRange     '1.3.4-build.3588',
+113 silly addNameRange     '1.2.27',
+113 silly addNameRange     '1.3.4',
+113 silly addNameRange     '1.3.5',
+113 silly addNameRange     '1.3.6',
+113 silly addNameRange     '1.3.7',
+113 silly addNameRange     '1.2.28',
+113 silly addNameRange     '1.3.8',
+113 silly addNameRange     '1.4.0-beta.0',
+113 silly addNameRange     '1.3.9',
+113 silly addNameRange     '1.3.10',
+113 silly addNameRange     '1.4.0-beta.1',
+113 silly addNameRange     '1.4.0-beta.2',
+113 silly addNameRange     '1.3.11',
+113 silly addNameRange     '1.4.0-beta.3',
+113 silly addNameRange     '1.3.12',
+113 silly addNameRange     '1.3.13',
+113 silly addNameRange     '1.4.0-beta.4',
+113 silly addNameRange     '1.3.14',
+113 silly addNameRange     '1.4.0-beta.5',
+113 silly addNameRange     '1.4.0-beta.6',
+113 silly addNameRange     '1.3.15',
+113 silly addNameRange     '1.4.0-rc.0',
+113 silly addNameRange     '1.4.0-rc.1',
+113 silly addNameRange     '1.4.0-rc.2',
+113 silly addNameRange     '1.4.0',
+113 silly addNameRange     '1.3.16',
+113 silly addNameRange     '1.4.1',
+113 silly addNameRange     '1.4.2',
+113 silly addNameRange     '1.3.17',
+113 silly addNameRange     '1.4.3',
+113 silly addNameRange     '1.4.4',
+113 silly addNameRange     '1.3.18',
+113 silly addNameRange     '1.4.5',
+113 silly addNameRange     '1.3.19',
+113 silly addNameRange     '1.4.6',
+113 silly addNameRange     '1.5.0-beta.0',
+113 silly addNameRange     '1.2.29',
+113 silly addNameRange     '1.3.20',
+113 silly addNameRange     '1.4.7',
+113 silly addNameRange     '1.5.0-beta.2',
+113 silly addNameRange     '1.4.8',
+113 silly addNameRange     '1.5.0-rc.0',
+113 silly addNameRange     '1.5.0-rc.1',
+113 silly addNameRange     '1.4.9',
+113 silly addNameRange     '1.5.0-rc.2',
+113 silly addNameRange     '1.5.0' ] ]
+114 silly addNamed angular@1.5.0
+115 verbose addNamed "1.5.0" is a plain semver version for angular
+116 silly cache afterAdd angular@1.5.0
+117 verbose afterAdd /Users/koolhavis/.npm/angular/1.5.0/package/package.json not in flight; writing
+118 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+119 verbose afterAdd /Users/koolhavis/.npm/angular/1.5.0/package/package.json written
+120 http fetch 200 https://registry.npmjs.org/surge/-/surge-0.17.7.tgz
+121 silly fetchAndShaCheck shasum d9ec476451530ff88ffd6ad4e970041181aa032f
+122 verbose addTmpTarball /var/folders/ky/1pnl_6lx5f31xlwjj2ppt0fw0000gn/T/npm-3770-84dbdf7c/registry.npmjs.org/surge/-/surge-0.17.7.tgz not in flight; adding
+123 verbose addTmpTarball already have metadata; skipping unpack for surge@0.17.7
+124 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+125 silly cache afterAdd surge@0.17.7
+126 verbose afterAdd /Users/koolhavis/.npm/surge/0.17.7/package/package.json not in flight; writing
+127 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+128 verbose afterAdd /Users/koolhavis/.npm/surge/0.17.7/package/package.json written
+129 http 200 https://registry.npmjs.org/bootstrap
+130 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+130 verbose headers   etag: '"35RPSIAJ5T4PEJ4MNIPXQ3BST"',
+130 verbose headers   'content-type': 'application/json',
+130 verbose headers   'cache-control': 'max-age=300',
+130 verbose headers   'content-length': '31248',
+130 verbose headers   'accept-ranges': 'bytes',
+130 verbose headers   date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+130 verbose headers   via: '1.1 varnish',
+130 verbose headers   age: '0',
+130 verbose headers   connection: 'keep-alive',
+130 verbose headers   'x-served-by': 'cache-atl6248-ATL',
+130 verbose headers   'x-cache': 'HIT',
+130 verbose headers   'x-cache-hits': '1',
+130 verbose headers   'x-timer': 'S1456543435.353554,VS0,VE340',
+130 verbose headers   vary: 'Accept' }
+131 silly get cb [ 200,
+131 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+131 silly get     etag: '"35RPSIAJ5T4PEJ4MNIPXQ3BST"',
+131 silly get     'content-type': 'application/json',
+131 silly get     'cache-control': 'max-age=300',
+131 silly get     'content-length': '31248',
+131 silly get     'accept-ranges': 'bytes',
+131 silly get     date: 'Sat, 27 Feb 2016 03:23:55 GMT',
+131 silly get     via: '1.1 varnish',
+131 silly get     age: '0',
+131 silly get     connection: 'keep-alive',
+131 silly get     'x-served-by': 'cache-atl6248-ATL',
+131 silly get     'x-cache': 'HIT',
+131 silly get     'x-cache-hits': '1',
+131 silly get     'x-timer': 'S1456543435.353554,VS0,VE340',
+131 silly get     vary: 'Accept' } ]
+132 verbose get saving bootstrap to /Users/koolhavis/.npm/registry.npmjs.org/bootstrap/.cache.json
+133 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+134 silly resolveWithNewModule bootstrap@3.3.6 checking installable status
+135 silly cache add args [ 'bootstrap@^3.3.6', null ]
+136 verbose cache add spec bootstrap@^3.3.6
+137 silly cache add parsed spec Result {
+137 silly cache add   raw: 'bootstrap@^3.3.6',
+137 silly cache add   scope: null,
+137 silly cache add   name: 'bootstrap',
+137 silly cache add   rawSpec: '^3.3.6',
+137 silly cache add   spec: '>=3.3.6 <4.0.0',
+137 silly cache add   type: 'range' }
+138 silly addNamed bootstrap@>=3.3.6 <4.0.0
+139 verbose addNamed ">=3.3.6 <4.0.0" is a valid semver range for bootstrap
+140 silly addNameRange { name: 'bootstrap', range: '>=3.3.6 <4.0.0', hasData: false }
+141 silly mapToRegistry name bootstrap
+142 silly mapToRegistry using default registry
+143 silly mapToRegistry registry https://registry.npmjs.org/
+144 silly mapToRegistry uri https://registry.npmjs.org/bootstrap
+145 verbose addNameRange registry:https://registry.npmjs.org/bootstrap not in flight; fetching
+146 verbose get https://registry.npmjs.org/bootstrap not expired, no request
+147 silly addNameRange number 2 { name: 'bootstrap', range: '>=3.3.6 <4.0.0', hasData: true }
+148 silly addNameRange versions [ 'bootstrap',
+148 silly addNameRange   [ '0.0.1',
+148 silly addNameRange     '0.0.2',
+148 silly addNameRange     '3.1.1',
+148 silly addNameRange     '3.2.0',
+148 silly addNameRange     '3.3.0',
+148 silly addNameRange     '3.3.1',
+148 silly addNameRange     '3.3.2',
+148 silly addNameRange     '3.3.4',
+148 silly addNameRange     '3.3.5',
+148 silly addNameRange     '3.3.6',
+148 silly addNameRange     '4.0.0-alpha.2' ] ]
+149 silly addNamed bootstrap@3.3.6
+150 verbose addNamed "3.3.6" is a plain semver version for bootstrap
+151 silly cache afterAdd bootstrap@3.3.6
+152 verbose afterAdd /Users/koolhavis/.npm/bootstrap/3.3.6/package/package.json not in flight; writing
+153 verbose correctMkdir /Users/koolhavis/.npm correctMkdir not in flight; initializing
+154 verbose afterAdd /Users/koolhavis/.npm/bootstrap/3.3.6/package/package.json written
+155 silly rollbackFailedOptional Starting
+156 silly rollbackFailedOptional Finishing
+157 silly runTopLevelLifecycles Starting
+158 silly runTopLevelLifecycles Finishing
+159 silly install printInstalled
+160 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/browserify-example
+160 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+160 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+160 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+160 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+160 verbose stack     at emitTwo (events.js:87:13)
+160 verbose stack     at Request.emit (events.js:172:7)
+160 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+160 verbose stack     at emitOne (events.js:82:20)
+160 verbose stack     at Request.emit (events.js:169:7)
+160 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+161 verbose statusCode 404
+162 verbose pkgid browserify-example
+163 verbose cwd /Users/koolhavis/tiy/class/Assignment/MEAN
+164 error Darwin 15.3.0
+165 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+166 error node v4.2.1
+167 error npm  v3.7.5
+168 error code E404
+169 error 404 Registry returned 404 for GET on https://registry.npmjs.org/browserify-example
+170 error 404
+171 error 404 'browserify-example' is not in the npm registry.
+172 error 404 You should bug the author to publish it (or use the name yourself!)
+173 error 404 It was specified as a dependency of 'mean'
+174 error 404 Note that you can also install from a
+175 error 404 tarball, folder, http url, or git url.
+176 verbose exit [ 1, true ]
