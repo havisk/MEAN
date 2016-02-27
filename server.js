@@ -2,8 +2,7 @@
 //
 //======================================================
 
-//connect to our database(hosted on mongolab.com)
-mongoose.connect('mongodb://<kool>:<dakool12>@ds017678.mlab.com:17678/mean-test')
+
 
 //Call the Packages------------------------------------
 
@@ -21,11 +20,17 @@ var bodyParser = require('body-parser');
 //used to see request
 var morgan  = require('morgan');
 
+//for working w/ our database
+var mongoose = require('mongoose');
+
 //set port for the app
 var port    = process.env.PORT || 8080;
 
 
 //APP CONFIGURATION-----------------------------------
+
+//connect to our database(hosted on mongolab.com)
+mongoose.connect('mongodb://kool:dakool12@ds017678.mlab.com:17678/mean-test')
 
 //use body parser so we can grab info from POST requests
 app.use(bodyParser.urlencoded({
@@ -90,8 +95,43 @@ apiRouter.route('/users')
   //create a new instance of the User Model
   var user  = new User();
 
-  //set the users
+  //set the users information ( comes from the request)
+  user.name      =  req.body.name;
+  user.username  =  req.body.username;
+  user.password  =  req.body.password;
+
+  //save the user and check for errors
+
+  user.save(function(err){
+    if (err) {
+      //duplicate entry
+      if (err.code == 11000)
+        return res.json({ success: false, message: 'A user with that  username already exists. ' })
+      else 
+        return res.send(err);
+    }
+
+    res.json({ message: 'User Created!'});
+  });
 })
+
+//get all users (accessed at GET http://localhost:8080/api/users)
+.get(function(req, res){
+  User.find(function(err, users){
+    if (err)
+      res.send(err);
+
+    //return users
+    res.json(users);
+  });
+});
+
+//routes that end in /users/:user_id
+//---------------------------------------------------------
+apiRouter.route('/users/:user_id')
+
+//get the user with that id (accessed at GET http://localhost:8080/api/users/:user_id)
+
 
 
 // REGISTER OUR ROUTES ------------------------------------------------
