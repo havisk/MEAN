@@ -142,7 +142,7 @@ apiRouter.route('/users/:user_id')
   });
 })
 
-//update the user with id (accessed at PUT http://localhost:8080/api/users/:user_id
+//update the user with id (accessed at PUT http://localhost:8080/api/users/:user_id)
 .put(function(req, res){
 
   //use our model to get user
@@ -165,6 +165,18 @@ apiRouter.route('/users/:user_id')
     });
   });
 })
+
+//delete the user with this id (accessed at DELETE http://localhost:8080/api/users/:user_id
+.delete(function(req, res){
+  User.remove({
+    _id: req.params.user_id }, function(err, user){
+      if (err)
+        return res.send(err);
+
+      res.json({ message: 'Successfully deleted' });
+    });
+});
+
 
 
 // REGISTER OUR ROUTES ------------------------------------------------
