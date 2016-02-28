@@ -142,6 +142,30 @@ apiRouter.route('/users/:user_id')
   });
 })
 
+//update the user with id (accessed at PUT http://localhost:8080/api/users/:user_id
+.put(function(req, res){
+
+  //use our model to get user
+  User.findById(req.params.user_id, function(err, user){
+    if(err)
+      res.send(err);
+
+    //update the users info only if it's new
+    if (req.body.name) user.name         = req.body.name;
+    if (req.body.username) user.username = req.body.username;
+    if (req.body.password) user.password = req.body.password;
+
+    //save the user
+
+    user.save(function(err){
+      if (err) res.send(err);
+
+      //return message
+      res.json({ message: 'User updated!'});
+    });
+  });
+})
+
 
 // REGISTER OUR ROUTES ------------------------------------------------
 
