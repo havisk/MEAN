@@ -26,11 +26,16 @@ var mongoose = require('mongoose');
 //set port for the app
 var port    = process.env.PORT || 8080;
 
+var jwt = require('jsonwebtoken');
+
+var superSecret = 'ilovevideogameygamegames';
+
 
 //APP CONFIGURATION-----------------------------------
 
 //connect to our database(hosted on mongolab.com)
-mongoose.connect('mongodb://kool:dakool12@ds017678.mlab.com:17678/mean-test')
+mongoose.connect('mongodb://kool:dakool12@ds017678.mlab.com:17678/mean-test');
+// app.set('superSecret', config.secret);
 
 //use body parser so we can grab info from POST requests
 app.use(bodyParser.urlencoded({
@@ -63,6 +68,56 @@ app.get('/', function(req, res){
 
 //get an instance of the express router
 var apiRouter = express.Router();
+
+//route for authenticating users (POST http://localhost:8080/api/authenticate)
+apiRouter.post('/authenticate', function(req, res){
+
+  //find user
+  //select the name username and password explicitly
+  User.findOne({
+    username: req.body.username
+  }).select('name username password').exec(function(err, user){
+
+    if(err) throw err;
+
+    //no user with that username was found
+    if (!user) {
+      res.json({
+        success: false,
+        message: 'Authentication failed. User not found.'
+      });
+    } else if (user) {
+
+      //check if password matches
+      var validPassword = user.comparePassword(req.body.password);
+      if  (!validPassword) {
+        res.json({
+          success: false,
+          message: 'Authentication failed.  Wrong password.'
+        });
+      } else {
+
+        //if user is found and password is right
+        //create a token
+        var token = jwt.sign({
+          name: user.name,
+          username: user.username
+        }, superSecret, {
+
+          //expires in 24 hours
+          expiresInMinutes: 1440
+        });
+
+        //return the information including token as JSON
+        res.json({
+          success: true,
+          message: 'Enjoy your token!',
+          token: token
+        });
+      }
+    }
+  });
+});
 
 
 //middleware to user for all requests
@@ -118,6 +173,7 @@ apiRouter.route('/users')
 //get all users (accessed at GET http://localhost:8080/api/users)
 .get(function(req, res){
   User.find(function(err, users){
+    // console.dir(req.body)
     if (err)
       res.send(err);
 
@@ -132,7 +188,7 @@ apiRouter.route('/users/:user_id')
 
 //get the user with that id (accessed at GET http://localhost:8080/api/users/:user_id)
 .get(function(req, res){
-
+  
   User.findById(req.params.user_id, function(err, user){
     if(err)
       res.send(err);
